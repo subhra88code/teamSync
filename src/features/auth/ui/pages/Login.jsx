@@ -63,7 +63,7 @@ const Login = () => {
               </div>
 
               <h1 className="text-2xl font-semibold tracking-tight text-[#e6e0e9] sm:text-[26px]">
-                Synthetix AI
+                TeamSync
               </h1>
 
               <p className="mt-1 text-sm text-[#cbc4d2]">

@@ -30,7 +30,7 @@ const Register = () => {
 
       <header className="fixed left-0 top-0 z-50 w-full px-4 py-5 sm:px-6">
         <div className="text-xl font-bold tracking-tight">
-          Synthetix AI
+          TeamSync
         </div>
       </header>
 
@@ -604,7 +604,7 @@ const Register = () => {
         "
       >
         <div className="text-xl font-semibold">
-          Synthetix AI
+          TeamSync
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 text-xs text-[#cbc4d2] sm:gap-6">
