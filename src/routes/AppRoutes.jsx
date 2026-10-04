@@ -5,7 +5,6 @@ import AuthLayout from "../app/layout/authLayout";
 import Login from "../features/auth/ui/pages/Login";
 import Register from "../features/auth/ui/pages/Register";
 import DashBoardLayout from "../app/layout/DashBoardLayout";
-import Home from "../features/dashBoard/ui/pages/Home";
 import { useDispatch } from "react-redux";
 import { currentLoggedinEmployeee } from "../features/auth/state/authAction";
 import PublicRoute from "./protectedRoutes/PublicRoute";
@@ -40,17 +39,22 @@ const AppRoutes = () => {
         },
       ],
     },
-    {
+       {
       path: "/home",
       element: <ProtectedRoute />,
       children: [
         {
-          path: '',
+          path: "",
           element: <DashBoardLayout />,
           children: [
+            ...commonRoutes,
             {
-              path: "",
-              element: <Home />,
+              element: <RoleBaseRoute allowedRoles={"admin"} />,
+              children: adminRoutes,
+            },
+            {
+              element: <RoleBaseRoute allowedRoles={"employee"} />,
+              children: employeeRoutes,
             },
           ],
         },
@@ -58,6 +62,8 @@ const AppRoutes = () => {
     },
   ]);
   return <RouterProvider router={router} />;
+
+
 };
 
 export default AppRoutes;
