@@ -1,5 +1,5 @@
-import MyTask from '../features/employee module/MyTask/ui/pages/MyTask'
-import Attendance from '../features/employee module/attendance/ui/pages/Attendance'
+import MyTask from '../features/employee module/My Tesk/ui/pages/MyTask'
+import Attendance from '../features/employee module/attandance/ui/pages/Attandance'
 import Profile from '../features/employee module/Profile/ui/pages/Profile'
 
 export let employeeRoutes = [

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import AuthLayout from "../app/layout/authLayout";
@@ -9,6 +9,10 @@ import { useDispatch } from "react-redux";
 import { currentLoggedinEmployeee } from "../features/auth/state/authAction";
 import PublicRoute from "./protectedRoutes/PublicRoute";
 import ProtectedRoute from "./protectedRoutes/ProtectedRoute";
+import {commonRoutes} from "./commonRoutes";
+import RoleBaseRoute from "./protectedRoutes/RoleBasedRoute"
+import {adminRoutes} from './adminRoutes'
+import {employeeRoutes} from './employeeRoutes'
 const AppRoutes = () => {
   let dispatch = useDispatch();
 
@@ -67,3 +71,4 @@ const AppRoutes = () => {
 };
 
 export default AppRoutes;
+
